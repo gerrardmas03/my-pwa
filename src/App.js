@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Fetch message from Flask backend
-    axios.get('/hello')
+    axios.get('http://127.0.0.1:3001/hello')
       .then(response => {
         setMessage(response.data.message);
       })
@@ -18,7 +18,7 @@ function App() {
       });
 
     // Fetch AWS example data
-    axios.get('/aws-example')
+    axios.get('http://127.0.0.1:3001/aws-example')
       .then(response => {
         setBuckets(response.data.buckets);
       })
@@ -43,3 +43,4 @@ function App() {
 }
 
 export default App;
+
